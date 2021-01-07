@@ -1,0 +1,40 @@
+
+img{
+  max-width:100%;
+  vertical-align:bottom;
+}
+
+
+
+$sp: 575px; // スマホ（縦）
+$sm: 767px; // スマホ（横）
+$md: 991px;  // タブレット
+$lg: 1199px;  // デスクトップ
+$bg: 1660px;  // デスクトップ(大)
+
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: ($sm)) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: ($md)) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: ($lg)) {
+    @content;
+  }
+}
+@mixin bg {
+  @media (max-width: ($bg)) {
+    @content;
+  }
+}

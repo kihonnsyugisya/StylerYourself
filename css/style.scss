@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+@import "./scss/reset/reset";
+@import "./scss/config/config";
+// @import "./scss/mixin/";
+
+main{
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  height: 1200px;
+  margin: 0 auto;
+  background-color: #f2e5dd;
+  @include bg{
+      height: 1900px;
+  };
+  @include  md{
+    height: 2300px;
+  }
+  @media (max-width:400px){
+    height: 1800px;
+  }
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 156px;
+  &-inner{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 65px 30px;
+    @include md{
+      padding: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-contents{
+    max-width: 360px;
+    // height: 60px;
+    display: flex;
+    @include md{
+      width: 33%;
+      justify-content: space-between;
+      img{
+        min-width: 19px;
+      }
+    }
+  }
+  button:nth-child(2n + 1){
+    display: inline-block;
+    margin: 0 50px;
+    width: 30px;
+    @include md{
+      margin: 0 25px;
+    }
+    @include sp{
+      margin: 0 15px;
+    }
+  }
+  button{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    i{
+      @include md{
+        font-size: 1.2em;
+      }
+    }
+  }
+  &-logo{
+    @include md{
+      width: 33%;
+    }
+  }
+  &-box{
+    height: 25px;
+    @include md{
+      width: 33%;
+      text-align: center;
+    }
+
+  }
+  &-text{
+    line-height: 25px;
+    @include md{
+      font-size: 0.5em;
+    }
+    img{
+      @include sp{
+        display: none;
+      }
+    }
+    .fa-caret-down{
+      padding-left: 7px;
+    }
+  }
+}
+
+.hero{
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include bg{
+    height: 1700px;
+  };
+  @include md{
+    height: 2200px;
+  }
+  @media (max-width:400px){
+    height: 1600px;
+  }
+  &-inner{
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 70px;
+  }
+  &-text_main{
+    position: absolute;
+    top:340px;
+    left: 265px;
+    font-family:"Roboto";
+    font-size: 187px;
+    letter-spacing: 0.05em;
+    z-index: 100;
+    span{
+      color: #c90103;
+    }
+    @include lg{
+      font-size: 150px;
+      left:130px;
+    }
+    @include md{
+      display: none;
+    }
+  }
+  &-tb_1{
+    position: absolute;
+    top: 708px;
+    left: 178px;
+    z-index: 100;
+    @include bg{
+      top: 1300px;
+      left: 60%;
+    }
+    @include md{
+      left: initial;
+    }
+  }
+  &-tb_2{
+    position: absolute;
+    top: 708px;
+    left: 81%;
+    z-index: 100;
+    @include sp{
+      left: initial;
+    }
+  }
+  &-text_menu{
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 35px;
+    // line-height: 0.7;
+  }
+  &-text_style{
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  &-text_money{
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 25px;
+    // line-height: 0.7;
+  }
+}
+.catch{
+  width: 100%;
+  max-width: 1920px;
+  &-box{
+    position: absolute;
+    top:0;
+    left:0;
+    @include bg{
+      top:170px
+    };
+    @include md{
+      left: 120px;
+    }
+    @include sm{
+      left: 0;
+      top:100px;
+    }
+  }
+  &-box_2{
+    position: absolute;
+    top:0;
+    left:0;
+    @include bg{
+      top:750px
+    };
+    @include md{
+      top: 1500px;
+    }
+    @media (max-width:400px){
+      top: 900px;
+    }
+  }
+}
+.footer{
+  position: absolute;
+  top: 1090px;
+  left: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 75px;
+  @include bg{
+    position: static;
+  }
+
+  &-inner{
+    margin: 0 auto;
+    max-width: 1780px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px;
+    @include sp{
+      padding: 0 35px;
+    }
+  }
+  &-tit{
+    font-size: 45px;
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    color: #c90103;
+    letter-spacing: -0.01;
+    @include sp{
+      font-size: 25px;
+
+    }
+  }
+  &-box{
+    display: flex;
+    align-items: center;
+
+  }
+}
